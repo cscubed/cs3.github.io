@@ -17,6 +17,7 @@ if($row){
 		print '<br>';
 	}
 }else{
-	print 'Unable to find user.'.$username;
+	print 'Login fail';
+	print '<br>';
 }
 ?>
