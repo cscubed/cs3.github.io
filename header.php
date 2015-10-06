@@ -1,15 +1,16 @@
-<?php 
+<?php
 require_once('conn.php');
-session_start();
 
 if(isset($_SESSION["user_id"])){
 	$user_id = $_SESSION["user_id"];
-	$sql = "SELECT * FROM users WHERE id='".$user_id."'";
-	$result = mysqli_query($conn, $sql);
+    $sql = "SELECT username, firstname, rank FROM users WHERE id = ? limit 1";
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute(array($user_id));
+    $row = $stmt->fetch();
 
-	if($row = mysqli_fetch_assoc($result)){
-		$username = $row['username'];
-		$firstname = $row['firstname'];
+	if($row){
+		$username = filter_var($row['username'], FILTER_SANITIZE_STRING);
+		$firstname = filter_var($row['firstname'], FILTER_SANITIZE_STRING);
 		$rank = $row['rank'];
 	}
 }

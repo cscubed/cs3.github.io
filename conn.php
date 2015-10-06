@@ -1,15 +1,18 @@
 <?php
 session_start();
 $servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "CS3";
+$username = "cs3";
+$password = "cs3";
+$dbname = "cs3";
+
+$dbstr = "pgsql:host=$servername;dbname=$dbname";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+try {
+    $dbh = new PDO($dbstr, $username, $password);
+} catch (PDOException $e) {
+    print "Error: " . $e->getMessage() . "<br/>";
+    die();
 }
 
 ?>

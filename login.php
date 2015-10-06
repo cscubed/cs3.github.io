@@ -3,10 +3,12 @@ include('conn.php');
 $username = $_POST['username'];
 $password = md5($_POST['password']);
 
-$sql = "SELECT * FROM users WHERE username='".$username."'";
-$result = mysqli_query($conn, $sql);
+$sql = "SELECT id, password FROM users WHERE username = ? limit 1";
+$stmt = $dbh->prepare($sql);
+$stmt->execute(array($username));
+$row = $stmt->fetch();
 
-if($row = mysqli_fetch_assoc($result)){
+if($row){
 	if($password == $row['password']){
 		$_SESSION["user_id"] = $row['id'];
 		header("Location: .");
