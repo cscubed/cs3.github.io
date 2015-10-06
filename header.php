@@ -37,7 +37,7 @@ if(isset($_SESSION["user_id"])){
 	<div class="menu">
 		<ul>
 			<li><a href="index.php">Home</a></li>
-			<li><a href="http://www.facebook.com/cscubed">Facebook</a></li>
+			<li><a href="http://www.facebook.com/cscubed" target="_blank">Facebook</a></li>
 			<li><a href="about.php">About/Contact Us</a></li>
 			<?php if(isset($_SESSION["user_id"])): ?>
 			<?php
@@ -57,7 +57,7 @@ if(isset($_SESSION["user_id"])){
 	<div id="nav2">
 		<ul>
 			<li><a href="index.php">Home</a></li>
-			<li><a href="http://www.facebook.com/cscubed">Facebook</a></li>
+			<li><a href="http://www.facebook.com/cscubed" target="_blank">Facebook</a></li>
 			<li><a href="about.php">About/Contact Us</a></li>
 			<?php if(isset($_SESSION["user_id"])): ?>
 			<?php

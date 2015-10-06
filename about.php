@@ -17,7 +17,7 @@
 			</div>
 			<div class="bodytext">
 				<h3 class="subhead">Contact Us</h3>
-				Contact us through our <a href="http://www.facebook.com/cscubed">Facebook</a>
+				Contact us through our <a href="http://www.facebook.com/cscubed" target="_blank">Facebook</a>
 				or by emailing contact@cs3.org.nz
 			</div>
 	 	</div>	
