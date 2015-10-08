@@ -17,6 +17,9 @@ if(isset($_SESSION["user_id"])){
 
 $type = filter_var($_GET['type'], FILTER_SANITIZE_STRING);
 
+$order   = array("\r\n", "\n", "\r");
+$replace = '<br />';
+
 if($type == 'user'){
 	if(!isset($_POST['username']) || empty($_POST['username'])) {
 		print '
@@ -55,6 +58,7 @@ if($type == 'user'){
 		if($rank == 'admin'){
 			$user_id = $_SESSION["user_id"];
 			$content = filter_var($_POST['content'], FILTER_UNSAFE_RAW);
+            $content = str_replace($order, $replace, $content);
 
             $sql = "insert into posts (user_id, content)
             values (:user_id, :content)";
@@ -80,6 +84,7 @@ if($type == 'user'){
 		$user_id = $_SESSION["user_id"];
 		$post_id = filter_var($_GET['post_id'], FILTER_SANITIZE_NUMBER_INT);
 		$comment = filter_var($_POST['comment'], FILTER_SANITIZE_STRING);
+        $comment = str_replace($order, $replace, $comment);
 
         $sql = "insert into comments (post_id, user_id, comment)
         values (:post_id, :user_id, :comment)";
