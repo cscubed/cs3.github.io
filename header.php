@@ -18,7 +18,7 @@ if(isset($_SESSION["user_id"])){
 
 <!DOCTYPE html>
 <head>
-    <title>CS3</title>
+    <title>CS³</title>
     <meta charset="UTF-8">
     <meta content="Computer Science Student Society">
     <meta keywords="computer,science,student,society,waikato,university,group">
