@@ -36,7 +36,7 @@ if($type == 'user'){
 		if(!($password1 == $password2)){
 			print "Passwords don't match";
 		}else{
-			$sql = "insert into users (username, firstname, email, password, rank)
+			$sql = "insert into users (username, firstname, email, password)
 			values (:username, :firstname, :email, :password)";
 
             $stmt = $dbh->prepare($sql);
