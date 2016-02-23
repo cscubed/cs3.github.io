@@ -131,6 +131,12 @@ pre {
     text-transform: uppercase;
 }
 
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    width: 650px;
+}
+
 /* MEDIA QUERIES
 ---------------------------------------------------------------- */
 /* 480px */
