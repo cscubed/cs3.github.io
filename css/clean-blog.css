@@ -408,6 +408,16 @@ input::-webkit-inner-spin-button {
 }
 @media only screen and (min-width: 768px) {
 	#menu-shadow>img{
-	top: 61px;
+		top: 61px;
+	}
 }
+
+/** Social Feed **/
+.img-responsive {
+  max-height: 400px;
+  width: auto !important;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
