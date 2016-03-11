@@ -267,7 +267,7 @@ if (typeof Object.create !== 'function') {
                         if (element.id) {
                             post.id = element.id;
                             //prevent a moment.js console warning due to Twitter's poor date format.
-                            post.dt_create = moment(new Date(element.created_at));
+                            post.dt_create = moment(new Date(element.created_at)).locale("en");
                             post.author_link = 'http://twitter.com/' + element.user.screen_name;
                             post.author_picture = element.user.profile_image_url;
                             post.post_url = post.author_link + '/status/' + element.id_str;
@@ -364,7 +364,7 @@ if (typeof Object.create !== 'function') {
                             text = (element.message) ? element.message : element.story;
 
                         post.id = element.id;
-                        post.dt_create = moment(element.created_time);
+                        post.dt_create = moment(element.created_time).locale("en");
                         post.author_link = 'http://facebook.com/' + element.from.id;
                         post.author_picture = Feed.facebook.graph + element.from.id + '/picture';
                         post.author_name = element.from.name;
@@ -420,7 +420,7 @@ if (typeof Object.create !== 'function') {
                         post.id = element.id;
                         post.attachment = '';
                         post.description = '';
-                        post.dt_create = moment(element.published);
+                        post.dt_create = moment(element.published).locale("en");
                         post.author_link = element.actor.url;
                         post.author_picture = element.actor.image.url;
                         post.author_name = element.actor.displayName;
@@ -518,7 +518,7 @@ if (typeof Object.create !== 'function') {
                         var post = {};
 
                         post.id = element.id;
-                        post.dt_create = moment(element.created_time * 1000);
+                        post.dt_create = moment(element.created_time * 1000).locale("en");
                         post.author_link = 'http://instagram.com/' + element.user.username;
                         post.author_picture = element.user.profile_picture;
                         post.author_name = element.user.full_name || element.user.username;
@@ -642,7 +642,7 @@ if (typeof Object.create !== 'function') {
                             var post = {},
                                 element = this;
                             post.id = element.id['$t'].replace(/[^a-z0-9]/gi, '');
-                            post.dt_create = moment((element.published['$t']));
+                            post.dt_create = moment((element.published['$t'])).locale("en");
                             post.author_link = element.author[0]['uri']['$t'];
                             post.author_picture = 'http:' + element.author[0]['gd$image']['src'];
                             post.author_name = element.author[0]['name']['$t'];
@@ -698,7 +698,7 @@ if (typeof Object.create !== 'function') {
                         var post = {};
 
                         post.id = element.id;
-                        post.dt_create= moment(element.created_at);
+                        post.dt_create= moment(element.created_at).locale("en");
                         post.author_link = element.creator.url;
                         post.author_picture = element.creator.image['60x60' ].url;
                         post.author_name =  element.creator.first_name + element.creator.last_name;
