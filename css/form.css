@@ -94,6 +94,9 @@ input[type=radio] {
   height: 1px;
   margin: 0;
   float: left;
+  opacity:0.2;
+  position:absolute;
+  left:-10000;
 }
 
 input[type=radio] + label {
