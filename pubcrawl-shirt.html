@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <title>Pub Crawl T-Shirt Order Form</title>
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/tshirt.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200&display=swap" rel="stylesheet">
+    <script src="./js/utilities.js"></script>
+  </head>
+  <body>
+    <div class="window">
+      <div class="main">
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted) {window.location='pubCrawl2019Thanks.html';}"></iframe>
+        <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSc2ww80pE9HRQ92WKOlsQff0RLQFXXpWqrkuN3Uuqje2Jts9A/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+        <img src="./img/logo-small.png" class="logo">
+
+        <h1>Pub Crawl T-Shirt Order Form</h1>
+        <p>
+            Please deposit $13.50 into the CS3 bank account (06-0301-0251559-00) using the reference given below. You will be able to collect your shirt on the day!
+            If you have any questions or concerns, feel free to email us: contact@cs3.org.nz
+            The deadline for orders is noon Friday, 27th September.
+        </p>
+
+        <div class="input">
+          <label>First Name</label>
+          <input type="text" id="firstName" name="entry.301278122" required>
+        </div>
+
+        <div class="input">
+            <label>Last Name</label>
+            <input type="text" id="firstName" name="entry.1967265907" required>
+        </div>
+
+        <div class="input">
+          <label>Email Address</label>
+          <p class="subtitle">We won't spam you - we just need this so we can tell you how to collect your t-shirt, or in case there is something wrong with your order.</p>
+          <input type="email" id="email" name="entry.425810219" required>
+        </div>
+
+        <div class="rocker">
+            <div class="input">
+                <label>Shirt Cut</label>
+                <div class="radioButtons">
+                <div>
+                    <input type="radio" id="unisex" name="entry.985712698" value="Unisex" required>
+                    <label for="unisex">Unisex</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" name="entry.985712698" value="Female" required>
+                    <label for="female">Female</label>
+                </div>
+                </div>
+            </div>
+
+            <div class="input">
+                <label>Unisex Size</label>
+                <select id="size" name="entry.1806615566">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="2XL">2XL</option>
+                    <option value="3XL">3XL</option>
+                    <option value="4XL">4XL</option>
+                    <option value="5XL">5XL</option>
+                </select>
+                <img src="./img/tshirt-unisex-size-chart.png" class="sizeChart">
+            </div>
+
+            <div class="input">
+                <label>Female Size</label>
+                <select id="size" name="entry.12333757">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="2XL">2XL</option>
+                    <option value="3XL">3XL</option>
+                </select>
+                <img src="./img/tshirt-female-size-chart.png" class="sizeChart">
+            </div>
+        </div>
+
+        <div class="input">
+            <label>Deposit Reference</label>
+            <p class="subtitle">Student ID number or your full name</p>
+            <input type="text" id="firstName" name="entry.924876930" required>
+        </div>
+
+        <div class="input">
+            <label>Additional Comments</label>
+            <p class="subtitle">Anything else we should know? Is someone else picking up your shirt?</p>
+            <input type="text" id="firstName" name="entry.1086714584">
+        </div>
+
+        <div class="buttons">
+          <div>
+              <input type="submit" id="submit" action="">
+              <label for="submit" class="button mainAction">Order Shirt</label>
+          </div>
+          <div>
+              <input type="reset" id="reset">
+              <label for="reset" class="button">Cancel</label>
+          </div>
+      </div>
+
+        </form>
+      </div>
+    </div>
+    <script>
+      RunUtilities();
+    </script>
+  </body>
+</html>

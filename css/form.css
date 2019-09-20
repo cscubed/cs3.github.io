@@ -1,0 +1,179 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-size: 15px;
+}
+
+h1 {
+  padding: 0 0 0.5em 0;
+  font-size: 2.5em;
+}
+
+#hidden_iframe {
+  display:none;
+}
+
+.window {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4em 0 4em 0;
+}
+
+.main {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  padding: 2em 7% 4em 7%;
+  width: 40%;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+label {
+  display: block;
+}
+
+label, a {
+  cursor: inherit;
+}
+
+.input {
+  clear: both;
+  margin-bottom: 20px;
+}
+
+input {
+  cursor: pointer;
+}
+
+.radioButtons, .buttons{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 1.5em;
+  overflow: hidden;
+}
+
+.radioButtons div, .buttons a, .buttons div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  cursor: pointer;
+}
+
+.radioButtons div:first-child label, .buttons a:first-child {
+  border-left: none;
+}
+
+.radioButtons div:last-child label, .buttons a:last-child {
+  border-right: none;
+}
+
+input[type=radio] {
+  opacity: 50;
+  position: relative;
+  left: 50%;
+  top: 2em;
+  height: 1px;
+  margin: 0;
+  float: left;
+}
+
+input[type=radio] + label {
+  border-left: 0.5px solid;
+  border-right: 0.5px solid;
+  padding: 10;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.input label {
+  padding-bottom: 0.2em;
+}
+
+input[type=radio]:checked + label {
+  background-image: none;
+}
+
+input[type=text], input[type=email], input[type=number], select, textarea {
+  padding: 0.5em;
+  width: 100%;
+  border-radius: 1em;
+  border: none;
+  font-size: 0.8em;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+  display: none;
+}
+
+.button {
+  padding: 10;
+  border-left: 0.5px solid;
+  border-right: 0.5px solid;
+  text-align: center;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.buttons {
+  margin-top: 4em;
+}
+
+textarea {
+  height: 100px;
+}
+
+.expander .input:last-child {
+  display: none;
+}
+
+.rocker .input {
+  display: none;
+}
+
+.rocker .input:first-child {
+  display: block;
+}
+
+.subtitle {
+  font-size: 0.6em;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .window {
+    padding: 2em 0 2em 0;
+  }
+
+  .main {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .window {
+    padding: 0;
+  }
+
+  .main {
+    width: 100%;
+  }
+}
